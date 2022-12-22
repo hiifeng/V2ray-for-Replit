@@ -4,7 +4,7 @@ Modlfy By ifeng<br>
 Web Site: https://www.hicairo.com <br>
 Telegram: https://t.me/HiaiFeng <br>
 
-这是一个备份仓库，如需使用，请frok以下链接进行使用。<br>
+这是一个备份仓库，如需使用，请fork以下链接进行使用。<br>
 https://replit.com/@hifeng/v2rayN?v=1<br>
 
 使用方法：<br>
