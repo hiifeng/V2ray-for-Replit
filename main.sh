@@ -6,8 +6,6 @@
 
 export PATH="~/nginx/sbin:~/v2ray/sbin:$PATH"
 
-rm -rf ~/nginx/*_temp
-
 if [ ! -d "~/nginx" ];then
 	\cp -ax .nginx ~/nginx
 fi
