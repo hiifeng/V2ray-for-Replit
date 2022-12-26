@@ -7,7 +7,7 @@ Telegram: https://t.me/HiaiFeng <br>
 # 简介：
 本项目用于在 Replit.com 免费服务上部署 V2ray ，采用的方案为 Nginx + WebSocket + VMess/VLess + TLS。
 # 注意事项：
-请勿滥用，账号封禁风险自负。网络流量每月有100GB软上限。
+<b>请勿滥用，账号封禁风险自负。网络流量每月有100GB软上限。</b>
 # 部署：
 在 <a href="https://replit.com">Replit.com</a> 上注册账户，然后点击下方按钮
 <p><a href="https://repl.it/github/hiifeng/V2ray-for-Replit" rel="nofollow"><img alt="Run on Repl.it" src="https://camo.githubusercontent.com/8f3d0bdc332bfddbb9694b553bba8319754153b39f2efdf3c78b17fbbb6b7990/68747470733a2f2f7265706c2e69742f62616467652f6769746875622f616e6462727569626d2f7265616465722d7265706c6974" style="height: 40px; width: 190px; max-width: 100%;" data-canonical-src="https://repl.it/badge/github/andbruibm/reader-replit"></a></p>
