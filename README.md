@@ -11,7 +11,7 @@ Telegram: https://t.me/HiaiFeng <br>
 # 部署：
 在 <a href="https://replit.com">Replit.com</a> 上注册账户，然后点击下方按钮
 <p><a href="https://repl.it/github/hiifeng/V2ray-for-Replit" rel="nofollow"><img alt="Run on Repl.it" src="https://camo.githubusercontent.com/8f3d0bdc332bfddbb9694b553bba8319754153b39f2efdf3c78b17fbbb6b7990/68747470733a2f2f7265706c2e69742f62616467652f6769746875622f616e6462727569626d2f7265616465722d7265706c6974" style="height: 40px; width: 190px; max-width: 100%;" data-canonical-src="https://repl.it/badge/github/andbruibm/reader-replit"></a></p>
-<p>再点击 Import from Github。</p>
+<p>再点击 <b>Import from Github</b>。</p>
 
 <p>或者直接fork以下链接进行使用：</p>
 https://replit.com/@hifeng/v2rayN?v=1
