@@ -28,5 +28,12 @@ https://replit.com/@hifeng/v2rayN?v=1
 <p><b>特别提醒：</b></p>
 <p>服务启动，copy节点信息后，请手动删除url.txt、uuid.txt、VLess.png及VMess.png文件。否则，你的节点任何人都可以使用。</p>
 
+<p><b>一行代码实现 Repl 保活：</b></p>
+<p>最近群里的小伙伴反馈 Repl 总是休眠停止服务，究其原因是官方为节约服务器资源开支，对于没有活动的 Repl 会停止服务，除非重新启动。如果你也安装了 <a href="https://www.hicairo.com/post/55.html" target="_blank">Doprax.com</a> 节点，可以在如下图所示的位置添加一行代码。原理为每隔5分钟让程序自动访问一次你的 Repl 服务。当然，如果你没有 Doprax.com 节点，也可以将这行代码添加到你的软路由上。</p>
+<img src="hhttps://www.hicairo.com/zb_users/upload/2022/12/202212291672276356316990.webp">
+<pre class="notranslate"><code># 将这行代码中的域名替换成 Replit 为你项目分配的域名
+while true ;do curl https://xx.xx.repl.co; sleep 300; done;
+</code></pre>
+
 # 反馈与交流：
 在使用过程中，如果遇到问题，请使用Telegram与我联系。（ https://t.me/HiaiFeng ）
