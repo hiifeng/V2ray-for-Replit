@@ -15,24 +15,26 @@ if [ ! -d "~/v2ray" ];then
 	\cp -ax .v2ray ~/v2ray
 fi
 
-if [[ -f uuid.txt ]]; then {
-  read uuid < uuid.txt
-  sed -i 's/[0-9a-f]\{8\}-[0-9a-f]\{4\}-[0-9a-f]\{4\}-[0-9a-f]\{4\}-[0-9a-f]\{12\}/'$uuid'/g' ~/v2ray/etc/config.json
-  } else {
-  uuid="de04add9-5c68-8bab-950c-08cd5320df18"
-  }
-fi
-url=${REPL_SLUG}.${REPL_OWNER}.repl.co
+UUID=${UUID:-$REPL_ID}
+VMESS_WSPATH=${VMESS_WSPATH:-'/vmess'}
+VLESS_WSPATH=${VLESS_WSPATH:-'/vless'}
 
-vmesslink=`echo -n "{\"v\":\"2\",\"ps\":\"hicairo.com\",\"add\":\"$url\",\"port\":\"443\",\"id\":\"$uuid\",\"aid\":\"0\",\"net\":\"ws\",\"type\":\"none\",\"host\":\"$url\",\"path\":\"/vmess\",\"tls\":\"tls\"}" | base64 -w 0`
+sed -i "s#[0-9a-f]\{8\}-[0-9a-f]\{4\}-[0-9a-f]\{4\}-[0-9a-f]\{4\}-[0-9a-f]\{12\}#$UUID#g;s#/vmess#$VMESS_WSPATH#g;s#/vless#$VLESS_WSPATH#g" ~/v2ray/etc/config.json
+sed -i "s#/vmess#$VMESS_WSPATH#g;s#/vless#$VLESS_WSPATH#g" ~/nginx/conf/conf.d/default.conf
+
+URL=${REPL_SLUG}.${REPL_OWNER}.repl.co
+
+vmesslink=`echo -n "{\"v\":\"2\",\"ps\":\"hicairo.com\",\"add\":\"$URL\",\"port\":\"443\",\"id\":\"$UUID\",\"aid\":\"0\",\"net\":\"ws\",\"type\":\"none\",\"host\":\"$URL\",\"path\":\"$VMESS_WSPATH\",\"tls\":\"tls\"}" | base64 -w 0`
 vmesslink=vmess://$vmesslink
 
-vlesslink="vless://"$uuid"@"$url":443?encryption=none&security=tls&type=ws&host="$url"&path=%2Fvless#hicairo.com"
+vlesslink="vless://"$UUID"@"$URL":443?encryption=none&security=tls&type=ws&host="$URL"&path="$VLESS_WSPATH"#hicairo.com"
 
-qrencode -o VMess.png $vmesslink
-qrencode -o VLess.png $vlesslink
+echo -e "\e[31mVMess协议链接：\n\e[0m$vmesslink\n\n\e[31mVLess协议链接：\n\e[0m$vlesslink"
 
-echo -e "VMess协议链接：\n$vmesslink\n\nVLess协议链接：\n$vlesslink" > url.txt
+echo -e "\n\e[31mVMess协议链接二维码：\n\e[0m"
+qrencode -o - -t UTF8 $vmesslink
+echo -e "\n\e[31mVLess协议链接二维码：\n\e[0m"
+qrencode -o - -t UTF8 $vlesslink
 
 v2ray -config ~/v2ray/etc/config.json >/dev/null 2>&1 &
 nginx -g 'daemon off;'
