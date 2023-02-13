@@ -14,8 +14,7 @@ Telegram: https://t.me/HiaiFeng <br>
 <p>再点击 <b>Import from Github</b>。</p>
 
 <p>或者直接 fork 以下链接进行使用：</p>
-https://replit.com/@maintest/v2rayN?v=1 <br>
-https://replit.com/@HashidaHaru/v2rayN?v=1
+https://replit.com/@hifeng/v2rayN?v=1
 
 # 使用方法：
 <p>点击顶部的 Run 按钮后，服务会自动运行。然后在屏幕 Console 窗口内拷贝 VMess/VLess 协议的链接，导入客户端软件即可。或者使用手机客户端软件扫描 VMess/VLess 协议的二维码。</p>
