@@ -24,9 +24,7 @@ sed -i "s#/vmess#$VMESS_WSPATH#g;s#/vless#$VLESS_WSPATH#g" ~/nginx/conf/conf.d/d
 
 URL=${REPL_SLUG}.${REPL_OWNER}.repl.co
 
-vmesslink=`echo -n "{\"v\":\"2\",\"ps\":\"hicairo.com\",\"add\":\"$URL\",\"port\":\"443\",\"id\":\"$UUID\",\"aid\":\"0\",\"net\":\"ws\",\"type\":\"none\",\"host\":\"$URL\",\"path\":\"$VMESS_WSPATH\",\"tls\":\"tls\"}" | base64 -w 0`
-vmesslink=vmess://$vmesslink
-
+vmesslink=vmess://$(echo -n "{\"v\":\"2\",\"ps\":\"hicairo.com\",\"add\":\"$URL\",\"port\":\"443\",\"id\":\"$UUID\",\"aid\":\"0\",\"net\":\"ws\",\"type\":\"none\",\"host\":\"$URL\",\"path\":\"$VMESS_WSPATH\",\"tls\":\"tls\"}" | base64 -w 0)
 vlesslink="vless://"$UUID"@"$URL":443?encryption=none&security=tls&type=ws&host="$URL"&path="$VLESS_WSPATH"#hicairo.com"
 
 echo -e "\e[31mVMess协议链接：\n\e[0m$vmesslink\n\n\e[31mVLess协议链接：\n\e[0m$vlesslink"
