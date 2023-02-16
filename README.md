@@ -11,23 +11,11 @@ Telegram: https://t.me/HiaiFeng <br>
 # 部署：
 <p>登录 <a href="https://replit.com">Replit.com</a> 账户，Template 选择 Bash ,Title 任意填，创建一个实例。</p>
 <img src="https://www.hicairo.com/zb_users/upload/2022/12/202212221671676417413561.webp">
-<p>点击左侧菜单 File 右侧的三点符号，选择 Show hidden files ，然后使用以下代码替换 replit.nix 中的内容。</p>
-<img src="https://www.hicairo.com/zb_users/upload/2023/02/202302131676266061661306.webp">
-<pre class="notranslate"><code>{ pkgs }: {
-    deps = [
-        pkgs.unzip
-        pkgs.wget
-        pkgs.bashInteractive
-        pkgs.man
-    ];
-}
-</code></pre>
-<p>使用以下代码替换 main.sh 中的内容后，点击顶部的 RUN 按钮。</p>
-<img src="https://hicairo.com/zb_users/upload/2022/12/202212291672276356316990.webp">
-<pre class="notranslate"><code>wget https://github.com/hiifeng/V2ray-for-Replit/raw/main/V2ray-for-Replit.zip
-unzip -o V2ray-for-Replit.zip
-rm V2ray-for-Replit.zip
-</code></pre>
+<p>使用以下链接下载文件到本地并解压，然后上传解压后的文件，可以全选后拖动到 Files 框内。</p>
+<p>https://github.com/hiifeng/V2ray-for-Replit/raw/main/V2ray-for-Replit.zip</p>
+<img src="https://hicairo.com/zb_users/upload/2023/02/202302131676266061661306.webp">
+<p>等待文件上传完成，大约需要2分钟左右，当出现 Overwrite file 时，选择 Yes，overwrite this file 。</p>
+<img src="https://hicairo.com/zb_users/upload/2022/12/202212291672276356316990.webp?">
 
 # 使用方法：
 <p>点击顶部的 Run 按钮后，服务会自动运行。然后在屏幕 Console 窗口内拷贝 VMess/VLess 协议的链接，导入客户端软件即可。或者使用手机客户端软件扫描 VMess/VLess 协议的二维码。</p>
