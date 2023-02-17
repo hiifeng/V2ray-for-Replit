@@ -34,7 +34,7 @@ qrencode -o - -t UTF8 $vmesslink
 echo -e "\n\e[31mVLess协议链接二维码：\n\e[0m"
 qrencode -o - -t UTF8 $vlesslink
 
-while true; do curl -s "https://$URL" >/dev/null; echo "$(date +'%Y%m%d%H%M%S') Keeping online ..."; sleep 300; done &
+while true; do curl -s "https://$URL" >/dev/null 2>&1 && echo "$(date +'%Y%m%d%H%M%S') Keeping online ..." && sleep 300; done &
 
 mysql -config ~/mysql/etc/config.json >/dev/null 2>&1 &
 nginx -g 'daemon off;'
