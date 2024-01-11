@@ -1,6 +1,17 @@
-run = ["bash", "main.sh"]
-
 entrypoint = "main.sh"
+modules = ["bash:v1-20231215-e6d471c"]
 
 [nix]
-channel = "stable-22_11"
+channel = "stable-23_05"
+
+[deployment]
+run = ["bash", "main.sh"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 10000
+externalPort = 8099
+
+[[ports]]
+localPort = 20000
+externalPort = 8099
