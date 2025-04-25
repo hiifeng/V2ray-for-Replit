@@ -4,10 +4,15 @@ Modlfy By ifeng<br>
 Web Site: https://www.hicairo.com <br>
 Telegram: https://t.me/HiaiFeng <br>
 
+# HiDNS 免费域名：
+[HiDNS](https://www.hidoha.net) 近日推出永久免费计划，敬请关注。[HiDNS Lifetime Free Plan](https://www.hidoha.net/news/important-update-on-hidns-free-domain-service)
+
 # 简介：
 本项目用于在 Replit.com 免费服务上部署 V2ray ，采用的方案为 Nginx + WebSocket + VMess/VLess + TLS。
+
 # 注意事项：
 <b>请勿滥用，账号封禁风险自负。网络流量每月10GB。</b>
+
 # 部署：
 <p>登录 <a href="https://replit.com">Replit.com</a> 账户，Template 选择 Bash ,Title 任意填，创建一个实例。</p>
 <img src="https://www.hicairo.com/zb_users/upload/2022/12/202212221671676417413561.webp">
