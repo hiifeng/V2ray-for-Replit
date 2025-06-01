@@ -40,3 +40,8 @@ VLESS_WSPATH                /vl
 
 # 反馈与交流：
 在使用过程中，如果遇到问题，请使用Telegram与我联系。（ https://t.me/HiaiFeng ）
+
+# 赞助声明：
+<a href="https://dartnode.com?aff=ifeng" target="_blank"><img src="https://status.dartnode.com/upload/logo1.png" width="100px"></a><br>
+I am honored that DARTNODE is offering a free server to sponsor my project.<br>
+DARTNODE's official Web Site : [https://dartnode.com](https://dartnode.com?aff=ifeng)
